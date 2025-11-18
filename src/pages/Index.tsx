@@ -1172,7 +1172,9 @@ const DiagnosisPage: React.FC<{ isLoggedIn: boolean; setCurrentPage: (page: stri
       const symptoms = currentInput.toLowerCase().split(/[,;]/).map(s => s.trim()).filter(s => s);
       
       // Make API call
-      const response = await axios.post('http://127.0.0.1:8000/predict', {
+      // const response = await axios.post('http://127.0.0.1:8000/predict', {
+      const response = await axios.post('https://medibot-backend-lyyq.onrender.com/predict', {
+
         symptoms: symptoms
       });
 
